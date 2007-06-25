@@ -1,7 +1,7 @@
 %define	module	Crypt-Random
 %define	name	perl-%{module}
 %define	version	1.25
-%define	release	1mdk
+%define	release	%mkrel 2
 
 Name:		%{name}
 Summary:	%{module} Perl module
