@@ -11,6 +11,7 @@ License:	Artistic
 Group:		Development/Perl
 Source:		http://search.cpan.org/%{module}-%{version}.tar.bz2
 Buildrequires:	perl-devel
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 URL:		http://search.cpan.org/dist/%{module}
 Buildarch:	noarch
 
