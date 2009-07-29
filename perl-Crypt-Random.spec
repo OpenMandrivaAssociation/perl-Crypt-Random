@@ -1,19 +1,18 @@
-%define	module	Crypt-Random
-%define	name	perl-%{module}
-%define	version	1.25
-%define	release	%mkrel 4
+%define	upstream_name	 Crypt-Random
+%define	upstream_version 1.25
 
-Name:		%{name}
-Summary:	%{module} Perl module
-Version:	%{version}
-Release:	%{release}
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
+Summary:	%{upstream_name} Perl module
 License:	Artistic
 Group:		Development/Perl
-Source:		http://search.cpan.org/%{module}-%{version}.tar.bz2
-Buildrequires:	perl-devel
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
-URL:		http://search.cpan.org/dist/%{module}
+URL:		http://search.cpan.org/dist/%{upstream_name}
+Source0:	http://search.cpan.org/%{upstream_name}-%{upstream_version}.tar.bz2
+
 Buildarch:	noarch
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 Crypt::Random is an interface module to the /dev/random device found on most
@@ -31,7 +30,7 @@ as requested. /dev/urandom is considerably faster at generation compared to
 desired.
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -51,4 +50,3 @@ rm -rf $RPM_BUILD_ROOT
 %{perl_vendorlib}/Crypt/*.pm
 %{perl_vendorlib}/Crypt/Random
 %{_mandir}/*/*
-
