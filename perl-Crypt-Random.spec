@@ -4,7 +4,7 @@
 Summary:	%{modname} Perl module
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	14
+Release:	15
 License:	Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}
