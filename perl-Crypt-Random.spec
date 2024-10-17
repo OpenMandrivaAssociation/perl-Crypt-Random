@@ -7,7 +7,7 @@ Version:	%perl_convert_version %{modver}
 Release:	19
 License:	Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{modname}
+Url:		https://search.cpan.org/dist/%{modname}
 Source0:	http://search.cpan.org/%{modname}-%{modver}.tar.bz2
 BuildArch:	noarch
 BuildRequires:	perl-devel
