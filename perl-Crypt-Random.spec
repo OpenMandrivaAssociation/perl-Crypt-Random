@@ -1,14 +1,14 @@
 %define	modname	Crypt-Random
-%define	modver	1.25
+%define	modver	1.57
 
 Summary:	%{modname} Perl module
 Name:		perl-%{modname}
-Version:	%perl_convert_version %{modver}
-Release:	19
+Version:	%{modver}
+Release:	1
 License:	Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{modname}
-Source0:	http://search.cpan.org/%{modname}-%{modver}.tar.bz2
+Url:		https://github.com/perl-Crypt-OpenPGP/Crypt-Random
+Source0:	https://cpan.metacpan.org/authors/id/T/TI/TIMLEGGE/Crypt-Random-%{modver}.tar.gz
 BuildArch:	noarch
 BuildRequires:	make
 BuildRequires:	perl-devel
